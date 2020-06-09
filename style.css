@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Brutman;
+    src: url("./Brutman-100.otf") format("opentype");
+}
+
+:root {
+    --main-color: #6951F0;
+}
+
+body {
+    font-family: Brutman, Lato, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 60px 8vw;
+}
+
+main {
+    
+}
+
+a {
+    text-decoration: line-through;
+    color: white;
+}
+
+.logo {
+    color: var(--main-color);
+}
+.links {
+    text-justify: right;
+    
+}
