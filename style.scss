@@ -7,7 +7,7 @@
     --main-color: #6951F0;
     --lighter-color: #7661F1;
     --column-width: 40vw;
-    --front-gradient: linear-gradient(--main-color, rgba(100,83,195,72), rgba(98,84,173,58));
+    --front-gradient: linear-gradient(var(--main-color), rgba(100,83,195,72), rgba(98,84,173,58));
     --back-gradient: linear-gradient( rgba(105,81,240,72), rgba(255, 255, 255,58));
 }
 
@@ -46,7 +46,7 @@ a {
 .logo-name {
     grid-column: 1/2;
 }
-.links, .opening-line {
+.nav, .opening-line {
     text-align: right;
     grid-column: 1/3;
 }
@@ -59,7 +59,7 @@ a {
 .opening-line .users {
     letter-spacing: 0.25em;
 }
-.links {
+.nav {
     text-align: right;
     justify-self: right;
     grid-column: 2/3;
@@ -152,9 +152,34 @@ section {
         left: 61%;
     }
 }
-.order button {
-    background: transparent;
-    color: white;
-    font-family: Brutman;
-    border: solid 10px var(--front-gradient);
+.order {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    .button {
+        position: relative;
+    }
+    .text {
+        position: absolute;
+        top: 34%;
+        left: 18%;
+    }
+    .shape {
+        position: relative;
+        width: 817px;
+        margin: 0 auto;
+    }
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin:  180px 0 -37px 0;
+    justify-content: space-between;
+    .contact {
+        text-align: end;
+    }
+    .links a, .phone {
+        margin-right: 1em;;
+    }
 }
