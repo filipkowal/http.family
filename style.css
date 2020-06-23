@@ -8,11 +8,12 @@
   --column-width: 40vw;
   --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
   --back-gradient: linear-gradient(rgba(105, 81, 240, 72), rgba(255, 255, 255, 58));
+  --font-size: 19px;
 }
 
 body {
   font-family: Brutman, Lato, sans-serif;
-  font-size: calc(14px + (19 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: var(--font-size);
   background-color: black;
   color: white;
   padding: 60px 12vw 0 12vw;
@@ -197,12 +198,19 @@ section svg {
 }
 
 @media (max-width: 1550px) {
-  .responsive, .social, .seo, .environment {
+  .responsive,
+.social,
+.seo,
+.environment {
     margin-top: 4em;
   }
 }
 @media (max-width: 1150px) {
-  .ux, .responsive, .social, .seo, .environment {
+  .ux,
+.responsive,
+.social,
+.seo,
+.environment {
     margin-left: auto;
     margin-right: auto;
   }
@@ -213,6 +221,55 @@ section svg {
 
   section .text {
     width: 86%;
+  }
+}
+@media (max-width: 860px) {
+  :root {
+    --font-size: calc(11px + 0.9vw);
+  }
+
+  section .text h2 {
+    margin-bottom: 0;
+  }
+
+  .ux {
+    margin-bottom: 6.5em;
+  }
+}
+@media (max-width: 689px) {
+  body {
+    padding: 4vw;
+  }
+}
+@media (max-width: 530px) {
+  .responsive .text {
+    top: 0;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+
+  .description {
+    max-width: 93%;
+  }
+}
+.small-screen {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .small-screen {
+    display: block;
+  }
+
+  .big-screen {
+    display: none;
+  }
+
+  .ux .text {
+    top: 33%;
   }
 }
 footer {
