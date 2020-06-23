@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Brutman;
   src: url("./Brutman-100.otf") format("opentype");
@@ -72,6 +73,7 @@ a {
 .opening-line {
   text-align: right;
   grid-column: 1/3;
+  margin-bottom: 2.2em;
 }
 
 .opening-line {
@@ -84,6 +86,10 @@ a {
 
 .opening-line .users {
   letter-spacing: 0.25em;
+}
+
+.users::before {
+  content: "  ";
 }
 
 .nav {
@@ -170,7 +176,7 @@ section svg {
   margin-top: -8vw;
 }
 .environment svg {
-  max-width: 781px;
+  max-width: 626px;
 }
 .environment .text {
   position: absolute;
@@ -197,20 +203,30 @@ section svg {
 }
 .order .shape {
   position: relative;
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 @media (max-width: 1550px) {
-  .responsive,
-.social,
-.seo,
-.environment {
+  section {
     margin-top: 4em;
   }
 
   .logo-name {
     display: none;
+  }
+
+  .environment {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1250px) {
+  .opening-line {
+    margin-bottom: 0;
+  }
+
+  .environment {
+    margin-top: 4em;
   }
 }
 @media (max-width: 1150px) {
@@ -255,6 +271,9 @@ section svg {
   .opening-line .users {
     letter-spacing: initial;
   }
+  .opening-line .users::before {
+    display: none;
+  }
 }
 @media (max-width: 530px) {
   .responsive .text {
@@ -294,6 +313,10 @@ section svg {
 
   .social .text {
     top: 21%;
+  }
+
+  .seo .text {
+    top: 16%;
   }
 }
 @media (max-width: 370px) {
