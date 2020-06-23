@@ -97,9 +97,13 @@ section {
 section h2 {
   margin-bottom: 30px;
 }
+section svg {
+  width: 100%;
+  height: 100%;
+}
 
 .ux {
-  max-width: 905px;
+  max-width: 622px;
 }
 .ux .smile {
   position: absolute;
@@ -109,23 +113,16 @@ section h2 {
   margin: 0 auto;
   max-width: 51%;
 }
-.ux .shape {
-  max-width: 100%;
-}
 .ux .text {
   position: absolute;
-  max-width: 52%;
   top: 42%;
   left: 10%;
 }
 
 .responsive {
-  max-width: 682px;
+  max-width: 622px;
   max-height: 684px;
   margin-left: auto;
-}
-.responsive .shape {
-  max-width: 100%;
 }
 .responsive .text {
   position: absolute;
@@ -135,11 +132,8 @@ section h2 {
 }
 
 .social {
-  max-width: 678px;
+  max-width: 622px;
   max-height: 681px;
-}
-.social .shape {
-  max-width: 100%;
 }
 .social .text {
   position: absolute;
@@ -153,12 +147,9 @@ section h2 {
 }
 
 .seo {
-  max-width: 547px;
+  max-width: 622px;
   max-height: 520px;
   margin-left: auto;
-}
-.seo .shape {
-  max-width: 100%;
 }
 .seo .text {
   position: absolute;
@@ -173,8 +164,8 @@ section h2 {
   margin-right: auto;
   margin-top: -8vw;
 }
-.environment .shape {
-  max-width: 100%;
+.environment svg {
+  max-width: 781px;
 }
 .environment .text {
   position: absolute;
@@ -205,6 +196,25 @@ section h2 {
   margin: 0 auto;
 }
 
+@media (max-width: 1550px) {
+  .responsive, .social, .seo, .environment {
+    margin-top: 4em;
+  }
+}
+@media (max-width: 1150px) {
+  .ux, .responsive, .social, .seo, .environment {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .seo .text {
+    left: 10%;
+  }
+
+  section .text {
+    width: 86%;
+  }
+}
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -230,18 +240,6 @@ footer .links {
 }
 footer .contact {
   border-image-source: linear-gradient(to left, var(--lighter-color), black);
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-.logo-name {
-  animation: typing 3.5s steps(11, end), blink-caret 0.75s step-end infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
