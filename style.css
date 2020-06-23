@@ -268,8 +268,12 @@ section svg {
     display: none;
   }
 
+  .presentButHide {
+    position: absolute;
+  }
+
   .ux .text {
-    top: 33%;
+    top: 28%;
   }
 }
 footer {

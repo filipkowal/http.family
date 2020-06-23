@@ -243,8 +243,11 @@ section {
     .big-screen {
         display: none;
     }
+    .presentButHide {
+        position: absolute;
+    }
     .ux .text{
-        top: 33%;
+        top: 28%;
     }
 }
 
