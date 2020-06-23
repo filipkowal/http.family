@@ -259,21 +259,31 @@ section svg {
   display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .small-screen {
     display: block;
   }
 
   .big-screen {
-    display: none;
-  }
-
-  .presentButHide {
     position: absolute;
+    opacity: 0;
   }
 
   .ux .text {
     top: 28%;
+  }
+
+  .social .description {
+    max-width: 80%;
+  }
+
+  .social .text {
+    top: 21%;
+  }
+}
+@media (max-width: 370px) {
+  h2 {
+    font-size: 2.2em;
   }
 }
 footer {
