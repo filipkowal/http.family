@@ -49,14 +49,15 @@ a {
     color: white;
 }
 
-.logo {
+.logo-sign {
     color: var(--main-color);
 }
-.logo-name {
+.logo {
     grid-column: 1/2;
     font-size: 8em;
     margin: 0;
 }
+.nav { margin-top: 49px; }
 .nav,
 .opening-line {
     text-align: right;
@@ -82,7 +83,6 @@ header > h2 {
 
 section {
     position: relative;
-    // margin-top: 5vw;
     h2 {
         margin-bottom: 30px;
     }
@@ -187,6 +187,9 @@ section {
     .environment {
         margin-top: 4em;
     }
+    .logo-name {
+        display: none;
+    }
 }
 @media (max-width: 1150px) {
     .ux,
@@ -218,6 +221,14 @@ section {
 @media (max-width: 689px) {
     body {
         padding: 4vw;
+    }
+    .opening-line {
+        h1 {
+            font-size: 2.5em;
+        }
+        .users{
+            letter-spacing: initial;
+        }
     }
 }
 @media (max-width: 530px) {

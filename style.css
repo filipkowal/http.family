@@ -54,14 +54,18 @@ a {
   color: white;
 }
 
-.logo {
+.logo-sign {
   color: var(--main-color);
 }
 
-.logo-name {
+.logo {
   grid-column: 1/2;
   font-size: 8em;
   margin: 0;
+}
+
+.nav {
+  margin-top: 49px;
 }
 
 .nav,
@@ -204,6 +208,10 @@ section svg {
 .environment {
     margin-top: 4em;
   }
+
+  .logo-name {
+    display: none;
+  }
 }
 @media (max-width: 1150px) {
   .ux,
@@ -239,6 +247,13 @@ section svg {
 @media (max-width: 689px) {
   body {
     padding: 4vw;
+  }
+
+  .opening-line h1 {
+    font-size: 2.5em;
+  }
+  .opening-line .users {
+    letter-spacing: initial;
   }
 }
 @media (max-width: 530px) {
