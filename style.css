@@ -45,6 +45,24 @@ h5 {
   font-weight: normal;
 }
 
+.side-padding {
+  padding: 0 4vw;
+}
+
+.about-us {
+  background: #804436;
+}
+.about-us .no-decoration {
+  text-decoration: none;
+}
+.about-us article {
+  margin-top: 13vh;
+  max-width: 38em;
+}
+.about-us p {
+  line-height: 1.5em;
+}
+
 header {
   display: grid;
   grid-template-columns: [left] 1fr [right] 1fr;
@@ -198,8 +216,8 @@ section svg {
 }
 .order .text {
   position: absolute;
-  top: 38%;
-  left: 20%;
+  top: 35%;
+  left: 24%;
 }
 .order .shape {
   position: relative;
@@ -279,6 +297,11 @@ section svg {
   .responsive .text {
     top: 0;
   }
+
+  .order .text {
+    top: 13vw;
+    left: 18vw;
+  }
 }
 @media (max-width: 500px) {
   body {
@@ -322,6 +345,11 @@ section svg {
 @media (max-width: 370px) {
   h2 {
     font-size: 2.2em;
+  }
+
+  .order .text {
+    top: 12vw;
+    left: 13vw;
   }
 }
 footer {
