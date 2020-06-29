@@ -17,8 +17,10 @@ body {
     font-size: var(--font-size);
     background-color: black;
     color: white;
-    padding: 60px 12vw 0 12vw;
     font-weight: normal;
+}
+main {
+    padding: 60px 12vw 0 12vw;
 }
 
 .description {
@@ -33,6 +35,9 @@ h2 {
 h3 {
     font-size: 1.67em;
 }
+h4 {
+    font-size: 1.3em;
+}
 h1,
 h2,
 h3,
@@ -46,15 +51,65 @@ h5 {
 }
 .about-us {
     background: #804436;
-    .no-decoration {
-        text-decoration: none;
-    }
     article {
         margin-top: 13vh;
         max-width: 38em;
     }
+}
+.about-us,
+.pricing {
+    .no-decoration {
+        text-decoration: none;
+        display: inline-block;
+    }
+    article {
+        margin-top: 13vh;
+    }
     p {
         line-height: 1.5em;
+    }
+    .back {
+        margin: 4em 0 3em 0;
+        display: block;
+        color: #9e9e9e;
+        display: inline-block;
+    }
+}
+.pricing {
+    background: #414144;
+    p {
+        // font-size: 0.8em;
+        line-height: 1.3em;
+    }
+    .card {
+        border: 10px solid #5c5c61;
+        padding: 2em 2em 4em 2em;
+        margin: 3em 0.5em 0 0.5em;
+        max-width: 200px;
+        position: relative;
+        svg {
+            margin: 1em auto 3em auto;
+            width: auto;
+            max-height: 168px;
+            display: block;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .price {
+        color: #9e9e9e;
+        text-align: right;
+        position: absolute;
+        bottom: 2em;
+        display: block;
+        right: 2em;
+    }
+    .blob {
+        display: block;
+        position: absolute;
     }
 }
 
@@ -253,6 +308,9 @@ section {
 @media (max-width: 689px) {
     body {
         padding: 4vw;
+    }
+    main {
+        padding: 0;
     }
     .opening-line {
         h1 {
