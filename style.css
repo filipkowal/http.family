@@ -87,6 +87,7 @@ h5 {
 
 .pricing {
   background: #414144;
+  overflow-x: hidden;
 }
 .pricing p {
   line-height: 1.3em;
@@ -109,6 +110,8 @@ h5 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1199px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 870px) {
   .pricing .cards {
@@ -127,6 +130,31 @@ h5 {
 .pricing .blob {
   display: block;
   position: absolute;
+  z-index: -1;
+}
+.pricing .blob.one {
+  top: 8%;
+  left: 54%;
+}
+.pricing .blob.two {
+  top: 55%;
+  left: -13%;
+}
+.pricing .blob.three {
+  top: 148vh;
+  left: 70vw;
+}
+.pricing .blob.four {
+  bottom: 10vh;
+  left: 65vw;
+}
+@media (max-width: 580px) {
+  .pricing .blob.two {
+    top: 85%;
+  }
+  .pricing .blob.three {
+    top: 225vh;
+  }
 }
 
 header {
@@ -303,10 +331,6 @@ section svg {
   .environment {
     margin-top: 0;
   }
-
-  :root {
-    --font-size: calc(11px + 0.9vw);
-  }
 }
 @media (max-width: 1250px) {
   .opening-line {
@@ -318,6 +342,10 @@ section svg {
   }
 }
 @media (max-width: 1150px) {
+  :root {
+    --font-size: calc(12px + 0.6vw);
+  }
+
   .ux,
 .responsive,
 .social,
