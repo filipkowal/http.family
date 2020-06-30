@@ -82,17 +82,26 @@ h5 {
         // font-size: 0.8em;
         line-height: 1.3em;
     }
+    a {
+        display: contents;
+    }
     .card {
         border: 10px solid #5c5c61;
         padding: 2em 2em 4em 2em;
         margin: 3em 0.1em 0 0.1em;
         max-width: 200px;
         position: relative;
+        transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
         svg {
             margin: 1em auto 3em auto;
             width: auto;
             max-height: 168px;
             display: block;
+        }
+        &:hover {
+            background-color: rgba(92, 92, 97, 50%);
+            border-color: rgba(104, 104, 110, 100%);
+            box-shadow: rgba(92, 92, 97, 90%) 12px -12px;
         }
     }
     .cards {
