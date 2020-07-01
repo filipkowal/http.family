@@ -197,6 +197,20 @@ a {
     font-size: 8em;
     margin: 0;
     display: inline-block;
+    .caret {
+        animation: pulse 900ms steps(1) 4;
+        @keyframes pulse {
+            0% {
+                border-right: 5px solid white;
+            }
+            50% {
+                border-right: none;
+            }
+            100% {
+                border-right: 5px solid white;
+            }
+        }
+    }
 }
 .nav {
     margin-top: 49px;
