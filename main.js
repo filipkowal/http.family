@@ -1,5 +1,5 @@
 function typeWriter() {
-    const text = 'hello.family';
+    const text = 'http.family';
     const caret = '<span class="caret"></span>';
     let logo = document.querySelector('.logo-name');
     let i = 0;
@@ -14,7 +14,7 @@ function typeWriter() {
             if (i > 12) {
                 clearInterval(interval);
 
-                setTimeout(remove, 2000);
+                setTimeout(remove, 1500);
             }
         }, 100);
     }
@@ -22,12 +22,17 @@ function typeWriter() {
     function remove() {
         let interval1 = setInterval(() => {
             i = i - 1;
-            console.log(i);
-            logo.innerHTML = logo.innerHTML.substring(0, i) + caret;
+            logo.innerHTML = text.substring(0, i) + caret;
 
             if (i <= 0) {
                 logo.innerHTML = '';
                 clearInterval(interval1);
+                let hidden = document.querySelectorAll('.hidden');
+
+                setTimeout(show, 200);
+                function show() {
+                    hidden.forEach(element => element.classList.remove('hidden'));
+                }
             }
         }, 50)
     }

@@ -200,12 +200,22 @@ a span::before {
   color: var(--main-color);
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 .logo {
   font-size: 8em;
   margin: 0;
+  display: flex;
+}
+.logo .logo-name {
+  word-wrap: break-word;
   display: inline-block;
+  max-width: 60vw;
 }
 .logo .caret {
+  border-right: 5px solid white;
   animation: pulse 900ms steps(1) 4;
 }
 @keyframes pulse {
@@ -218,6 +228,14 @@ a span::before {
   100% {
     border-right: 5px solid white;
   }
+}
+
+.start-hide {
+  opacity: 100%;
+  transition: opacity 1200ms;
+}
+.start-hide.hidden {
+  opacity: 0;
 }
 
 .nav {
@@ -363,10 +381,6 @@ section svg {
 @media (max-width: 1550px) {
   section {
     margin-top: 4em;
-  }
-
-  .logo-name {
-    display: none;
   }
 
   .environment {

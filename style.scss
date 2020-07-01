@@ -193,11 +193,20 @@ a {
 .logo-sign {
     color: var(--main-color);
 }
+.logo-link {
+    text-decoration: none;
+}
 .logo {
     font-size: 8em;
     margin: 0;
-    display: inline-block;
+    display: flex;
+    .logo-name {
+        word-wrap: break-word;
+        display: inline-block;
+        max-width: 60vw;
+    }
     .caret {
+        border-right: 5px solid white;
         animation: pulse 900ms steps(1) 4;
         @keyframes pulse {
             0% {
@@ -210,6 +219,13 @@ a {
                 border-right: 5px solid white;
             }
         }
+    }
+}
+.start-hide {
+    opacity: 100%;
+    transition: opacity 1200ms;
+    &.hidden {
+        opacity: 0;
     }
 }
 .nav {
@@ -342,9 +358,6 @@ section {
 @media (max-width: 1550px) {
     section {
         margin-top: 4em;
-    }
-    .logo-name {
-        display: none;
     }
     .environment {
         margin-top: 0;
