@@ -1,4 +1,5 @@
 function typeWriter() {
+    console.log('typeWriter')
     const text = 'http.family';
     const caret = '<span class="caret"></span>';
     let logo = document.querySelector('.logo-name');
@@ -14,9 +15,9 @@ function typeWriter() {
             if (i > 12) {
                 clearInterval(interval);
 
-                setTimeout(remove, 1500);
+                setTimeout(remove, 150);
             }
-        }, 100);
+        }, 60);
     }
 
     function remove() {
@@ -27,15 +28,22 @@ function typeWriter() {
             if (i <= 0) {
                 logo.innerHTML = '';
                 clearInterval(interval1);
-                let hidden = document.querySelectorAll('.hidden');
 
-                setTimeout(show, 200);
-                function show() {
-                    hidden.forEach(element => element.classList.remove('hidden'));
-                }
+                setTimeout(show, 50);
             }
-        }, 50)
+        }, 30)
     }
 }
 
-typeWriter();
+function show() {
+    console.log('show')
+    let hidden = document.querySelectorAll('.hidden');
+    hidden.forEach(element => element.classList.remove('hidden'));
+    sessionStorage.setItem('coming_from_subpage', false);
+}
+
+function typeOrShow() {
+    sessionStorage.getItem('coming_from_subpage') === 'true' ? show() : typeWriter();
+}
+
+typeOrShow();

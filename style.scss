@@ -244,6 +244,18 @@ a {
 }
 .opening-line .users {
     letter-spacing: 0.25em;
+    // animation: breathe 6s ease-in-out infinite;
+    // @keyframes breathe {
+    //     0% {
+    //         letter-spacing: 0.1em;
+    //     }
+    //     50% {
+    //         letter-spacing: 0em;
+    //     }
+    //     100% {
+    //         letter-spacing: 0.1em;
+    //     }
+    // }
 }
 .users::before {
     content: " \00A0";
