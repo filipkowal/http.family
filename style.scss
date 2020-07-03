@@ -225,7 +225,7 @@ a {
     opacity: 100%;
     transition: opacity 1200ms;
     &.hidden {
-        opacity: 0;
+        // opacity: 0;
     }
 }
 .nav {
@@ -289,6 +289,21 @@ section {
         margin: 0 auto;
         max-width: 51%;
     }
+    // .eyes {
+    //     animation: light 2s steps(1);
+
+    //     @keyframes light {
+    //         5%,
+    //         15% {
+    //             fill: url("#paint1_linear");
+    //         }
+    //         0%,
+    //         10%,
+    //         30% {
+    //             fill: white;
+    //         }
+    //     }
+    // }
     .text {
         position: absolute;
         top: 42%;

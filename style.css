@@ -234,10 +234,6 @@ a span::before {
   opacity: 100%;
   transition: opacity 1200ms;
 }
-.start-hide.hidden {
-  opacity: 0;
-}
-
 .nav {
   margin-top: 49px;
 }

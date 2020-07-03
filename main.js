@@ -1,5 +1,4 @@
 function typeWriter() {
-    console.log('typeWriter')
     const text = 'http.family';
     const caret = '<span class="caret"></span>';
     let logo = document.querySelector('.logo-name');
@@ -36,7 +35,6 @@ function typeWriter() {
 }
 
 function show() {
-    console.log('show')
     let hidden = document.querySelectorAll('.hidden');
     hidden.forEach(element => element.classList.remove('hidden'));
     sessionStorage.setItem('coming_from_subpage', false);
@@ -46,4 +44,4 @@ function typeOrShow() {
     sessionStorage.getItem('coming_from_subpage') === 'true' ? show() : typeWriter();
 }
 
-typeOrShow();
+// typeOrShow();
