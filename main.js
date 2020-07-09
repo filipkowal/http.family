@@ -44,4 +44,4 @@ function typeOrShow() {
     sessionStorage.getItem('coming_from_subpage') === 'true' ? show() : typeWriter();
 }
 
-// typeOrShow();
+typeOrShow();
