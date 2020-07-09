@@ -1,0 +1,10 @@
+@use 'base';
+@use 'subpage';
+
+.about-us {
+    background: #804436;
+    article {
+        margin-top: 13vh;
+        max-width: 38em;
+    }
+}

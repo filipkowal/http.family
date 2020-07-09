@@ -1,0 +1,269 @@
+@use 'base';
+
+.description {
+    max-width: 85%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-hide {
+    opacity: 100%;
+    transition: opacity 1200ms;
+    &.hidden {
+        opacity: 0;
+    }
+}
+.nav {
+    margin-top: 49px;
+}
+.nav,
+.opening-line {
+    text-align: right;
+    margin-bottom: 2.2em;
+}
+.opening-line {
+    margin-top: calc(35vh + 0.5em);
+}
+.opening-line .text-gradient {
+    color: var(--main-color);
+}
+.opening-line .users {
+    letter-spacing: 0.25em;
+}
+.users::before {
+    content: " \00A0";
+}
+.nav {
+    text-align: right;
+    justify-self: right;
+}
+header > h2 {
+    max-width: 50%;
+}
+
+section {
+    position: relative;
+    h2 {
+        margin-bottom: 30px;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+.ux {
+    max-width: 622px;
+
+    .smile {
+        position: absolute;
+        left: 26%;
+        top: 10%;
+        display: block;
+        margin: 0 auto;
+        max-width: 51%;
+    }
+    .text {
+        position: absolute;
+        top: 42%;
+        left: 10%;
+    }
+}
+.responsive {
+    max-width: 622px;
+    max-height: 684px;
+    margin-left: auto;
+    .text {
+        position: absolute;
+        max-width: 506px;
+        top: 6%;
+        left: 10%;
+    }
+}
+.social {
+    max-width: 622px;
+    max-height: 681px;
+    .text {
+        position: absolute;
+        max-width: 461px;
+        top: 41%;
+        left: 13%;
+        h2 {
+            z-index: -1;
+            position: relative;
+        }
+    }
+}
+.seo {
+    max-width: 622px;
+    max-height: 520px;
+    margin-left: auto;
+    .text {
+        position: absolute;
+        max-width: 546px;
+        top: 30%;
+        left: -18%;
+    }
+}
+.environment {
+    max-width: 1093px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -8vw;
+    svg {
+        max-width: 626px;
+    }
+    .text {
+        position: absolute;
+        max-width: 382px;
+        top: 47%;
+        left: 12%;
+    }
+}
+.order {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    h2 {
+        font-size: 2em;
+    }
+    .button {
+        position: relative;
+    }
+    .text {
+        position: absolute;
+        top: 35%;
+        left: 24%;
+    }
+    .shape {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+.small-screen {
+    display: none;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7em;
+    justify-content: space-between;
+    .contact {
+        text-align: end;
+    }
+    .links a,
+    .phone {
+        margin-right: 1em;
+    }
+    .links,
+    .contact {
+        padding-top: 1em;
+        padding-bottom: 0;
+        border-top: 5px aliceblue solid;
+        border-image-slice: 1;
+    }
+    .links {
+        border-image-source: linear-gradient(to right, var(--lighter-color), black);
+    }
+    .contact {
+        border-image-source: linear-gradient(to left, var(--lighter-color), black);
+    }
+}
+
+@media (max-width: 1550px) {
+    section {
+        margin-top: 4em;
+    }
+    .environment {
+        margin-top: 0;
+    }
+}
+@media (max-width: 1250px) {
+    .opening-line {
+        margin-bottom: 0;
+    }
+    .environment {
+        margin-top: 4em;
+    }
+}
+@media (max-width: 1150px) {
+    .ux,
+    .responsive,
+    .social,
+    .seo,
+    .environment {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .seo .text {
+        left: 10%;
+    }
+    section .text {
+        width: 86%;
+    }
+}
+@media (max-width: 860px) {
+    section .text h2 {
+        margin-bottom: 0;
+    }
+    .ux {
+        margin-bottom: 6.5em;
+    }
+}
+@media (max-width: 689px) {
+    .opening-line {
+        h1 {
+            font-size: 2.5em;
+        }
+        .users {
+            letter-spacing: initial;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 530px) {
+    .responsive .text {
+        top: 0;
+    }
+    .order .text {
+        top: 13vw;
+        left: 18vw;
+    }
+}
+@media (max-width: 500px) {
+    .description {
+        max-width: 93%;
+    }
+}
+
+@media (max-width: 420px) {
+    .small-screen {
+        display: block;
+    }
+    .big-screen {
+        position: absolute;
+        opacity: 0;
+    }
+    .ux .text {
+        top: 28%;
+    }
+    .social .description {
+        max-width: 80%;
+    }
+    .social .text {
+        top: 21%;
+    }
+    .seo .text {
+        top: 16%;
+    }
+}
+@media (max-width: 370px) {
+    .order .text {
+        top: 12vw;
+        left: 13vw;
+    }
+}

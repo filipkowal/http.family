@@ -1,0 +1,163 @@
+@font-face {
+  font-family: Brutman;
+  src: url("../resources/Brutman-100.otf") format("opentype");
+}
+:root {
+  --main-color: #6951f0;
+  --lighter-color: #7661f1;
+  --column-width: 40vw;
+  --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
+  --back-gradient: linear-gradient(rgba(105, 81, 240, 72), rgba(255, 255, 255, 58));
+  --font-size: 19px;
+}
+
+body {
+  font-family: Brutman, Lato, sans-serif;
+  font-size: var(--font-size);
+  background-color: black;
+  color: white;
+  font-weight: normal;
+}
+
+main {
+  padding: 60px 12vw 0 12vw;
+}
+
+h1 {
+  font-size: 2.9em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.67em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+
+.side-padding {
+  padding: 0 4vw;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: line-through;
+  color: white;
+  position: relative;
+  transition: clip-path 275ms ease;
+}
+a:hover span::before, a:focus span::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+a span {
+  position: relative;
+  display: inline;
+  text-decoration: line-through;
+}
+a span::before {
+  position: absolute;
+  content: attr(data-content);
+  text-decoration: line-through;
+  text-decoration-color: var(--main-color);
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  transition: clip-path 275ms ease;
+}
+
+.logo-sign {
+  color: var(--main-color);
+}
+
+.logo {
+  font-size: 8em;
+  margin: 0;
+  display: flex;
+}
+.logo .logo-name {
+  word-wrap: break-word;
+  display: inline-block;
+  max-width: 60vw;
+}
+.logo .caret {
+  border-right: 5px solid white;
+  animation: pulse 900ms steps(1) 4;
+}
+@keyframes pulse {
+  0% {
+    border-right: 5px solid white;
+  }
+  50% {
+    border-right: none;
+  }
+  100% {
+    border-right: 5px solid white;
+  }
+}
+
+@media (max-width: 1150px) {
+  :root {
+    --font-size: calc(12px + 0.6vw);
+  }
+}
+@media (max-width: 689px) {
+  body {
+    padding: 4vw;
+  }
+
+  main {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 370px) {
+  h2 {
+    font-size: 2.2em;
+  }
+}
+.about-us article,
+.pricing article {
+  margin-top: 13vh;
+}
+.about-us p,
+.pricing p {
+  line-height: 1.5em;
+}
+.about-us .back,
+.pricing .back {
+  margin: 4em 0 3em 0;
+  display: block;
+  display: inline-block;
+}
+
+.about-us {
+  background: #804436;
+}
+.about-us article {
+  margin-top: 13vh;
+  max-width: 38em;
+}
+
+/*# sourceMappingURL=about-us.css.map */

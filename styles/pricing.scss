@@ -1,0 +1,85 @@
+@use 'base';
+@use 'subpage';
+
+.pricing {
+    background: #414144;
+    overflow-x: hidden;
+    p {
+        line-height: 1.3em;
+    }
+    a {
+        display: contents;
+    }
+    .card {
+        border: 10px solid #5c5c61;
+        padding: 2em 2em 4em 2em;
+        margin: 3em 0.1em 0 0.1em;
+        max-width: 200px;
+        position: relative;
+        transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+        svg {
+            margin: 1em auto 3em auto;
+            width: auto;
+            max-height: 168px;
+            display: block;
+        }
+        &:hover {
+            background-color: rgba(92, 92, 97, 50%);
+            border-color: rgba(104, 104, 110, 100%);
+            box-shadow: rgba(92, 92, 97, 90%) 12px -12px;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1199px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (max-width: 870px) {
+        .cards {
+            margin-left: -6vw;
+            margin-right: -6vw;
+        }
+    }
+    .price {
+        color: #9e9e9e;
+        text-align: right;
+        position: absolute;
+        bottom: 2em;
+        display: block;
+        right: 2em;
+    }
+    .blob {
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        &.one {
+            top: 8%;
+            left: 54%;
+        }
+        &.two {
+            top: 55%;
+            left: -13%;
+        }
+
+        &.three {
+            top: 148vh;
+            left: 70vw;
+        }
+        &.four {
+            bottom: 10vh;
+            left: 65vw;
+        }
+        @media (max-width: 580px) {
+            &.two {
+                top: 85%;
+            }
+            &.three {
+                top: 225vh;
+            }
+        }
+    }
+}

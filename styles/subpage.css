@@ -1,0 +1,16 @@
+.about-us article,
+.pricing article {
+  margin-top: 13vh;
+}
+.about-us p,
+.pricing p {
+  line-height: 1.5em;
+}
+.about-us .back,
+.pricing .back {
+  margin: 4em 0 3em 0;
+  display: block;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=subpage.css.map */
