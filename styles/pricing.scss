@@ -10,32 +10,43 @@
     a {
         display: contents;
     }
-    .card {
-        border: 10px solid #5c5c61;
-        padding: 2em 2em 4em 2em;
-        margin: 3em 0.1em 0 0.1em;
-        max-width: 200px;
-        position: relative;
-        transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
-        svg {
-            margin: 1em auto 3em auto;
-            width: auto;
-            max-height: 168px;
-            display: block;
-        }
-        &:hover {
-            background-color: rgba(92, 92, 97, 50%);
-            border-color: rgba(104, 104, 110, 100%);
-            box-shadow: rgba(92, 92, 97, 90%) 12px -12px;
-        }
-    }
+
     .cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         max-width: 1199px;
         margin-left: auto;
         margin-right: auto;
+
+        .card {
+            border: 7px solid #5c5c61;
+            padding: 2em 2em 4em 2em;
+            margin: 3em 0 0 0;
+            max-width: 200px;
+            position: relative;
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+            &:not(:nth-of-type(0)) {
+                margin-left: 2em;
+            }
+            h4 {
+                border-bottom: 3px solid var(--main-color);
+                display: inline-block;
+                margin: 0;
+            }
+            svg {
+                margin: 1em auto 3em auto;
+                width: auto;
+                max-height: 100px;
+                display: block;
+            }
+            &:hover {
+                background-color: rgba(92, 92, 97, 50%);
+                border-color: rgba(104, 104, 110, 100%);
+                box-shadow: rgba(92, 92, 97, 90%) 12px -12px;
+            }
+        }
     }
     @media (max-width: 870px) {
         .cards {
@@ -55,6 +66,7 @@
         display: block;
         position: absolute;
         z-index: -1;
+        transform: scale(0.7);
 
         &.one {
             top: 8%;

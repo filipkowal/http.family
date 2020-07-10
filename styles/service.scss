@@ -11,17 +11,18 @@ article {
     margin-left: auto;
 }
 .options-container {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3em auto;
     display: flex;
 }
 .left {
-    padding: 6vw;
+    padding: 4em;
     background: #414144;
 
     header {
         display: flex;
         align-items: flex-end;
+        margin-bottom: 3em;
+
         svg {
             max-height: 90px;
         }
@@ -31,7 +32,6 @@ article {
             margin-bottom: 0;
             margin-left: 10px;
         }
-        margin-bottom: 5vw;
     }
     .options-title-container {
         display: flex;
@@ -83,4 +83,16 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .final-price-container {
+        text-align: center;
+        margin-bottom: 0.5em;
+        color: var(--main-color);
+        .final-price {
+            display: inline;
+        }
+    }
+    button {
+        padding: 0 3em;
+    }
 }

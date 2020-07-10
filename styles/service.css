@@ -86,7 +86,8 @@ h5 {
 }
 
 [type=number] {
-  border: 0.3em solid var(--main-color);
+  border: none;
+  border-bottom: 0.3em solid var(--main-color);
   background: none;
   width: 1.15em;
   color: white;
@@ -99,6 +100,18 @@ h5 {
 }
 [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+button {
+  background-color: var(--main-color);
+  color: white;
+  font-family: Brutman;
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+button:hover {
+  background-color: #6130ed;
 }
 
 .side-padding {
@@ -191,6 +204,15 @@ a span::before {
     font-size: 2.2em;
   }
 }
+body {
+  font-size: 1em;
+}
+
+.logo {
+  font-size: 2em;
+  transition: font-size 200ms ease-in-out;
+}
+
 .about-us article,
 .pricing article {
   margin-top: 13vh;
@@ -201,7 +223,7 @@ a span::before {
 }
 .about-us .back,
 .pricing .back {
-  margin: 4em 0 3em 0;
+  margin: 2em 0 2em 0;
   display: block;
   display: inline-block;
 }
@@ -217,19 +239,18 @@ article {
 }
 
 .options-container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3em auto;
   display: flex;
 }
 
 .left {
-  padding: 6vw;
+  padding: 4em;
   background: #414144;
 }
 .left header {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 5vw;
+  margin-bottom: 3em;
 }
 .left header svg {
   max-height: 90px;
@@ -287,6 +308,17 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.right .final-price-container {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: var(--main-color);
+}
+.right .final-price-container .final-price {
+  display: inline;
+}
+.right button {
+  padding: 0 3em;
 }
 
 /*# sourceMappingURL=service.css.map */
