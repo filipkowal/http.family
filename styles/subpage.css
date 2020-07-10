@@ -7,6 +7,10 @@ body {
   transition: font-size 200ms ease-in-out;
 }
 
+.about-us .logo {
+  font-size: 8em;
+}
+
 .about-us article,
 .pricing article {
   margin-top: 13vh;
@@ -17,7 +21,6 @@ body {
 }
 .about-us .back,
 .pricing .back {
-  margin: 2em 0 2em 0;
   display: block;
   display: inline-block;
 }

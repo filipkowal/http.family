@@ -69,22 +69,22 @@
         transform: scale(0.7);
 
         &.one {
-            top: 8%;
-            left: 54%;
+            top: -12%;
+            left: 62%;
         }
         &.two {
-            top: 55%;
+            top: 30%;
             left: -13%;
         }
 
         &.three {
-            top: 148vh;
-            left: 70vw;
+            left: 60vw;
+            bottom: -27vh;
         }
-        &.four {
-            bottom: 10vh;
-            left: 65vw;
-        }
+        // &.four {
+        //     bottom: 10vh;
+        //     left: 65vw;
+        // }
         @media (max-width: 580px) {
             &.two {
                 top: 85%;
