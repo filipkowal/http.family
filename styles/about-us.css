@@ -5,6 +5,7 @@
 :root {
   --main-color: #6951f0;
   --lighter-color: #7661f1;
+  --grey: #c4c4c4;
   --column-width: 40vw;
   --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
   --back-gradient: linear-gradient(rgba(105, 81, 240, 72), rgba(255, 255, 255, 58));
@@ -45,6 +46,43 @@ h3,
 h4,
 h5 {
   font-weight: normal;
+}
+
+[type=checkbox] {
+  position: absolute;
+  left: -1000vw;
+  opacity: 0;
+}
+
+[type=checkbox] + label {
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+}
+
+[type=checkbox] + label::before {
+  content: "";
+  border: 0.3em solid var(--main-color);
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.5em;
+  position: absolute;
+  left: 0;
+  top: -0.15em;
+}
+
+[type=checkbox]:checked + label::before {
+  background-color: var(--main-color);
+  animation: stretch 100ms ease-in-out;
+}
+@keyframes stretch {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .side-padding {
