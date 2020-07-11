@@ -8,6 +8,11 @@ body {
 .about-us .logo {
     font-size: 8em;
 }
+.back {
+    display: none;
+    display: inline-block;
+    z-index: 2;
+}
 
 .about-us,
 .pricing {
@@ -16,9 +21,5 @@ body {
     }
     p {
         line-height: 1.5em;
-    }
-    .back {
-        display: block;
-        display: inline-block;
     }
 }

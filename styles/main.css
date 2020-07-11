@@ -519,6 +519,12 @@ body {
   font-size: 8em;
 }
 
+.back {
+  display: none;
+  display: inline-block;
+  z-index: 2;
+}
+
 .about-us article,
 .pricing article {
   margin-top: 13vh;
@@ -526,11 +532,6 @@ body {
 .about-us p,
 .pricing p {
   line-height: 1.5em;
-}
-.about-us .back,
-.pricing .back {
-  display: block;
-  display: inline-block;
 }
 
 .about-us {
@@ -642,9 +643,15 @@ article {
   display: flex;
 }
 
+@media (max-width: 1000px) {
+  .options-container {
+    flex-wrap: wrap;
+  }
+}
 .left {
   padding: 4em;
   background: #414144;
+  flex-grow: 1;
 }
 .left header {
   display: flex;
@@ -699,14 +706,29 @@ article {
   align-self: flex-end;
   margin-left: auto;
   color: var(--grey);
+  word-wrap: no-wrap;
 }
 
+@media (max-width: 600px) {
+  .left {
+    padding: 2em;
+  }
+  .left .options-list li label {
+    max-width: 63%;
+  }
+}
+@media (max-width: 450px) {
+  .left {
+    padding: 1em;
+  }
+}
 .right {
   padding: 3vw;
   background: #d4d4d4;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
 }
 .right .final-price-container {
   text-align: center;

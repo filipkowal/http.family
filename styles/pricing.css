@@ -227,6 +227,12 @@ body {
   font-size: 8em;
 }
 
+.back {
+  display: none;
+  display: inline-block;
+  z-index: 2;
+}
+
 .about-us article,
 .pricing article {
   margin-top: 13vh;
@@ -234,11 +240,6 @@ body {
 .about-us p,
 .pricing p {
   line-height: 1.5em;
-}
-.about-us .back,
-.pricing .back {
-  display: block;
-  display: inline-block;
 }
 
 .pricing {
