@@ -96,3 +96,22 @@ article {
         padding: 0 3em;
     }
 }
+.blob {
+    display: block;
+    position: absolute;
+    transform: scale(0.7);
+
+    &.one {
+        top: -12%;
+        left: 62%;
+    }
+    &.two {
+        top: 30%;
+        right: 70vw;
+    }
+
+    &.three {
+        left: 60vw;
+        bottom: -6vh;
+    }
+}
