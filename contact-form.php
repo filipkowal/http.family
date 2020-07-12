@@ -17,13 +17,12 @@
 
         <article class="side-padding">
 
-            <form class="contact-form side-padding" action="contactform.php" method="POST">
+            <form class="contact-form side-padding" action="./server/contact-form-server.php" method="POST">
                 <h1 class='email'>
                     Nazywam się <span class="input-container"><input name="name" type="text"></span>
                     i chciałbym porozmawiać o moim <span class="my-project">projekcie</span>.
                     Proszę o kontakt pod adres e-mail:
                     <span class="input-container"><input type="email" name="email"></span>.
-                    <!-- <a href="#" id="send">Wyślij ></a> -->
                 </h1>
                 <input type="submit" value="Wyślij >" name="submit">
             </form>
@@ -31,7 +30,7 @@
         </article>
 
         <div class="side-padding">
-            <a class="back" href="single-page.html">
+            <a class="back" href="single-page.php">
                 <h4><span data-content="< powrót">
                         < powrót</span>
                 </h4>

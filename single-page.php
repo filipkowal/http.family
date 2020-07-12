@@ -16,7 +16,8 @@
         </a>
 
         <article class="side-padding">
-            <form class="options-form">
+            <form class="options-form" action="contact-form.php" method="GET">
+                <input type="hidden" name="product" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
 
                 <div class="left">
                     <header>
@@ -115,9 +116,9 @@
                     <div class="final-price-container">
                         od <h1 class="final-price">1500</h1> zł
                     </div>
-                    <a href="contact-form.html" class="submit">
+                    <button type="submit" href="contact-form.html" class="submit">
                         <h3>Zamów stronę</h3>
-                    </a>
+                        </a>
                 </div>
             </form>
 
