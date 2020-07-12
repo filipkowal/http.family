@@ -120,13 +120,16 @@
                 </div>
             </form>
 
-            <form class="contact-form should-hide hidden side-padding">
-                <h1>
-                    Nazywam się <span class="input-container"><input type="text"></span>
+            <form class="contact-form should-hide hidden side-padding" action="contactform.php" method="POST">
+                <h1 class='email'>
+                    Nazywam się <span class="input-container"><input name="name" type="text"></span>
                     i chciałbym porozmawiać o moim <span class="my-project">projekcie</span>.
                     Proszę o kontakt pod adres e-mail:
-                    <span class="input-container"><input type="email"></span>.
+                    <span class="input-container"><input type="email" name="email"></span>.
+                    <!-- <a href="#" id="send">Wyślij ></a> -->
                 </h1>
+                <input type="submit" value="Wyślij >" name="submit">
+                <!-- <button>Wyślij</button> -->
             </form>
 
         </article>
