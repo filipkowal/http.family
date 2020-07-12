@@ -36,34 +36,3 @@ function watchInputs() {
 
 changeFinalPrice();
 watchInputs();
-
-function toggleContactForm() {
-    let shouldHideElements = Array.from(document.querySelectorAll('.should-hide'));
-    let optionsForm = document.querySelector('.options-form');
-    let back = document.querySelector('.hide-form-back');
-
-    function toggleElements() {
-        event.preventDefault();
-        shouldHideElements.forEach(element => {
-            element.classList.contains('hidden') ? element.classList.remove('hidden') : element.classList.add('hidden');
-        })
-    }
-
-    optionsForm.addEventListener('submit', event => {
-        toggleElements();
-    })
-    back.addEventListener('click', event => {
-        toggleElements();
-    })
-}
-toggleContactForm();
-
-// let contactForm = document.querySelector('.contact-form');
-// console.log(contactForm);
-// contactForm.addEventListener('submit', event => {
-
-//     event.preventDefault();
-//     console.log('trying to send');
-
-//     // sendEmail()
-// })
