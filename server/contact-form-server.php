@@ -11,9 +11,6 @@ if (isset($_POST['submit'])) {
 
     $text = "Cześć,\n\nChciałabym/chciałbym porozmawiać o:\n\n".$productName."\n\n".$productOptions."\n\nPozdrawiam,\n".$name;
 
-    // echo "productOptions:".$text;
-
-
     if(mail($mailTo, $subject, $text, $headers)) {
         header("Location: ../contact-form.php?mailsend");
     } else {

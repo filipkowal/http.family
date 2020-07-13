@@ -17,6 +17,7 @@
   --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
   --back-gradient: linear-gradient(rgba(105, 81, 240, 72), rgba(255, 255, 255, 58));
   --font-size: 19px;
+  --h1: 2.9em;
 }
 
 body {
@@ -32,7 +33,7 @@ main {
 }
 
 h1 {
-  font-size: 2.9em;
+  font-size: var(--h1);
   font-weight: bold;
 }
 
@@ -746,35 +747,6 @@ article {
   opacity: 0;
   position: absolute;
   right: 999vw;
-}
-
-.contact-form {
-  margin-top: 22%;
-}
-.contact-form .input-container {
-  max-width: 10em;
-  display: inline-block;
-}
-.contact-form [type=text],
-.contact-form [type=email] {
-  border: none;
-  border-bottom: 3px solid white;
-  width: 100%;
-  color: var(--main-color);
-  background-color: transparent;
-  font-family: Brutman;
-  font-size: 1em;
-}
-.contact-form .email a {
-  display: block;
-  text-align: right;
-  text-decoration: none;
-  margin-top: 1em;
-}
-@media (max-width: 500px) {
-  .contact-form h1 {
-    font-size: 2em;
-  }
 }
 
 .blob {
