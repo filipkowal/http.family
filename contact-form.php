@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link href="./styles/contact-form.css" rel="stylesheet">
+    <?php include_once "./server/get-back-href.php"; ?>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 
         <article class="side-padding">
 
-            <form class="contact-form side-padding" action="./server/contact-form-server.php" method="POST">
+            <form class="contact-form side-padding" action="contact-form-server.php" method="POST">
 
                 <input type="hidden" name="product" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
 
@@ -33,9 +34,10 @@
         </article>
 
         <div class="side-padding">
-            <a class="back" href="single-page.php">
-                <h4><span data-content="< powrót">
-                        < powrót</span>
+            <a class="back" href="<?php $getBackHref; ?>">
+                <h4>
+                    <span data-content="< powrót">
+                    &lt; powrót</span>
                 </h4>
             </a>
         </div>

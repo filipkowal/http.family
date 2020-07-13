@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona pojedyncza</title>
+    <title>Strona firmowa</title>
     <link href="./styles/service.css" rel="stylesheet">
 </head>
 
@@ -42,7 +42,7 @@
                                 </linearGradient>
                             </defs>
                         </svg>
-                        <h3 class="title">Strona pojedyncza</h3>
+                        <h3 class="title">Strona firmowa</h3>
                     </header>
 
                     <div class="options-group">
@@ -114,7 +114,7 @@
 
                 <div class="right">
                     <div class="final-price-container">
-                        od <h1 class="final-price">900</h1> zł
+                        od <h1 class="final-price">1500</h1> zł
                     </div>
                     <button type="submit" href="contact-form.html" class="submit">
                         <h3>Zamów stronę</h3>
