@@ -18,6 +18,9 @@
         <article class="side-padding">
 
             <form class="contact-form side-padding" action="./server/contact-form-server.php" method="POST">
+
+                <input type="hidden" name="product" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+
                 <h1 class='email'>
                     Nazywam się <span class="input-container"><input name="name" type="text"></span>
                     i chciałbym porozmawiać o moim <span class="my-project">projekcie</span>.

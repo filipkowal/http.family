@@ -2,23 +2,45 @@
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
-    // $message = $_POST['message'];
+    $uri = $_POST['product'];
     $subject = "Porozmawiajmy o projekcie";
     $mailTo = "hello@http.family";
     $headers = "From:".$mailFrom;
-    $text = "Mail testowy";
-    // ."\n\n".$message."\n\nPozdrawiam,\n".$name;
+    $productName = getProductName($uri);
+    $productOptions = getOptions($uri);
+
+    $text = "Cześć,\n\nChciałabym/chciałbym porozmawiać o:\n\n".$productName."\n\n".$productOptions."\n\nPozdrawiam,\n".$name;
+
+    // echo "productOptions:".$text;
+
 
     if(mail($mailTo, $subject, $text, $headers)) {
-        echo "It was sent";
-        echo $mailTo, $subject, $text, $headers;
+        header("Location: ../contact-form.php?mailsend");
     } else {
-        echo "Email was not sent";
+        header("Location: ../contact-form.php?mailsend=error");
     }
-    // header("Location: single-page.php?mailsend");
 
 }
 else {
-    header("Location: single-page.php?mailsend=error");
+    header("Location: contact-form.php?mailsend=from-uri");
+}
+
+function getProductName($uri) {
+    $start = strpos($uri, "%2F") + 3;
+    $end = strpos(substr($uri, $start), ".php");
+    return substr($uri, $start, $end);
+}
+function getOptions($uri) {
+    $options = explode("&", $uri);
+    array_shift($options);
+
+    $optionsString = "";
+    foreach ($options as $option) {
+        if ($option !== "slider=") {
+            $optionsString .= $option."\n";
+        }
+    }
+
+    return $optionsString;
 }
 ?>
