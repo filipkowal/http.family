@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $text = "Cześć,\n\nChciałabym/chciałbym porozmawiać o:\n\n".$productName."\n\n".$productOptions."\n\nPozdrawiam,\n".$name;
 
     if(mail($mailTo, $subject, $text, $headers)) {
-        header("Location: ../contact-form.php?mailsend");
+        header("Location: ../thanks.php");
     } else {
         header("Location: ../contact-form.php?mailsend=error");
     }
