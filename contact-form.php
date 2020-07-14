@@ -18,9 +18,9 @@
 
         <article class="side-padding">
 
-            <form class="contact-form side-padding" action="contact-form-server.php" method="POST">
+            <form class="contact-form side-padding" action="./server/send-mail.php" method="POST">
 
-                <input type="hidden" name="product" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                <input type="hidden" name="productDescription" value="<?php echo $productDescription; ?>">
 
                 <h1 class='email-form'>
                     Nazywam się <span class="input-container"><input name="name" type="text"></span>
@@ -34,7 +34,7 @@
         </article>
 
         <div class="side-padding">
-            <a class="back" href="<?php $getBackHref; ?>">
+            <a class="back" href="<?php echo $backHref; ?>">
                 <h4>
                     <span data-content="< powrót">
                     &lt; powrót</span>

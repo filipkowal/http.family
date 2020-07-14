@@ -17,9 +17,7 @@
 
         <article class="side-padding">
 
-            <div class="contact-form side-padding" action="./server/contact-form-server.php" method="POST">
-
-
+            <div class="contact-form side-padding">
                 <h1 class='email-form'>
                     Dzięki za zaufanie!<br>
                     Cieszymy się, że będziemy mogli porozmawiać o Twoim pomyśle.

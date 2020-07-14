@@ -17,7 +17,8 @@
 
         <article class="side-padding">
             <form class="options-form" action="contact-form.php" method="GET">
-                <input type="hidden" name="product" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                
+                <input type="hidden" name="productName" value="company-site">
 
                 <div class="left">
                     <header>

@@ -1,21 +1,31 @@
 <?php
 
-$productName = "";
+$productName = isset($_GET['productName']) ? $_GET['productName'] : getNameFromUri();
 
-if (isset($_POST['submit'])) {
-    $uri = $_POST['product'];
-    $productName = getProductName($uri);
+function getNameFromUri() {
+    $uri = $_SERVER['REQUEST_URI'];
+    $start = strpos($uri, "?") + 1;
+    $nameFromUri = strpos($uri, "?") > 0 ? substr($uri, $start) : "";
+    return $nameFromUri;
 }
 
-function getProductName($uri) {
-    $start = strpos($uri, "%2F") + 3;
-    $end = strpos(substr($uri, $start), ".php");
-    return substr($uri, $start, $end);
+$productDescription = "";
+function getProductDescription($productDescription, $productName) {
+    if (isset($_GET['productName'])) {
+        foreach($_GET as $key => $value) {
+            if ($value) {
+                $productDescription .= $key.": ".$value."\n";
+            }
+        }
+    }
+    $productDescription = $productDescription !== "" ? $productDescription : $productName;
+    return $productDescription;
 }
+$productDescription = getProductDescription($productDescription, $productName);
 
 function getBackHref($productName) {
-    return $productName && $productName !== "piece" && $productName !== "e-commerce" ? $productName.".php" : "pricing.php";
+    return $productName && ($productName !== "piece") && ($productName !== "e-commerce") ? $productName.".php" : "pricing.php";
 }
 
-$productName = getBackHref($productName);
+$backHref = getBackHref($productName);
 ?>
