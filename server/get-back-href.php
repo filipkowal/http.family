@@ -14,7 +14,7 @@ function getProductName($uri) {
 }
 
 function getBackHref($productName) {
-    return $productName && $productName !== "piece" && $productName !== "e-commerce" ? $productName.".php" : "pricing.html";
+    return $productName && $productName !== "piece" && $productName !== "e-commerce" ? $productName.".php" : "pricing.php";
 }
 
 $productName = getBackHref($productName);

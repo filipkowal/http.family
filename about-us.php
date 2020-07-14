@@ -11,7 +11,7 @@
 <body class="about-us">
     <main>
         <div class="side-padding">
-            <a href="index.html" class="no-decoration">
+            <a href="index.php" class="no-decoration">
                 <h1 class="logo"><span class="logo-sign no-decoration">://</span></h1>
             </a>
             <article>
@@ -24,9 +24,9 @@
                     pełni
                     odnawialną energią.</p>
                 <h4>Przywitaj się:<br>
-                    <a href="mailto:czesc@http.family"><span
-                            data-content="czesc@http.family">czesc@http.family</span></a></h4>
-                <a class="back" href="index.html">
+                    <a href="mailto:hello@http.family"><span
+                            data-content="czesc@http.family">hello@http.family</span></a></h4>
+                <a class="back" href="index.php">
                     <h4><span data-content="< powrót">
                             < powrót</span>
                     </h4>

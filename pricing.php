@@ -11,7 +11,7 @@
 <body class="pricing">
     <main>
         <div class="side-padding">
-            <a class="no-decoration" href="index.html">
+            <a class="no-decoration" href="index.php">
                 <h1 class="logo"><span class="logo-sign no-decoration">://</span></h1>
             </a>
         </div>
@@ -187,7 +187,7 @@
         </div>
 
         <div class="side-padding">
-            <a class="back" href="index.html">
+            <a class="back" href="index.php">
                 <h4><span data-content="< powrót">
                         < powrót</span>
                 </h4>

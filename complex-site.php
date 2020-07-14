@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <a href="index.html" class="logo-link side-padding">
+        <a href="index.php" class="logo-link side-padding">
             <h1 class="logo"><span class="logo-sign no-decoration">://</span><span
                     class="logo-name no-decoration"></span></h1>
         </a>
@@ -126,7 +126,7 @@
                     <div class="final-price-container">
                         od <h1 class="final-price">2500</h1> zł
                     </div>
-                    <button type="submit" href="contact-form.html" class="submit">
+                    <button type="submit" href="contact-form.php" class="submit">
                         <h3>Zamów stronę</h3>
                         </a>
                 </div>
@@ -135,7 +135,7 @@
         </article>
 
         <div class="side-padding">
-            <a class="back" href="pricing.html">
+            <a class="back" href="pricing.php">
                 <h4><span data-content="< powrót">
                         < powrót</span>
                 </h4>

@@ -11,7 +11,7 @@
 
 <body>
     <main>
-        <a href="index.html" class="logo-link side-padding">
+        <a href="index.php" class="logo-link side-padding">
             <h1 class="logo"><span class="logo-sign no-decoration">://</span><span
                     class="logo-name no-decoration"></span></h1>
         </a>
