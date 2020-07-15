@@ -22,12 +22,12 @@
 
                 <input type="hidden" name="productDescription" value="<?php echo $productDescription; ?>">
 
-                <h1 class='email-form'>
+                <h2 class='email-form'>
                     Nazywam się <span class="input-container"><input name="name" type="text"></span>
-                    i chciałbym porozmawiać o moim <span class="my-project">projekcie</span>.
+                    i chciałbym porozmawiać o wybranym <span class="my-project">projekcie</span>.
                     Proszę o kontakt pod adres e-mail:
                     <span class="input-container email-container"><input type="email" name="email"></span>.
-                </h1>
+                </h2>
                 <div class="buttons">
                     <a class="back" href="<?php echo $backHref; ?>">
                         <h4>
