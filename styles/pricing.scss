@@ -2,7 +2,6 @@
 @use 'subpage';
 
 .pricing {
-    background: #414144;
     overflow-x: hidden;
     p {
         line-height: 1.3em;
@@ -21,7 +20,7 @@
         margin-top: 8vh;
 
         .card {
-            border: 7px solid #5c5c61;
+            border: 7px solid var(--border-color);
             padding: 2em 2em 4em 2em;
             margin: 1em;
             max-width: 200px;
@@ -41,8 +40,8 @@
             }
             &:hover {
                 background-color: rgba(92, 92, 97, 50%);
-                border-color: rgba(104, 104, 110, 100%);
-                box-shadow: rgba(92, 92, 97, 90%) 12px -12px;
+                border-color: var(--main-color);
+                box-shadow: var(--border-color) 12px -12px;
             }
         }
     }

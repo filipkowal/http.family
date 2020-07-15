@@ -1,10 +1,6 @@
 @use 'base';
 @use 'subpage';
 
-body {
-    background: #bbbbbb;
-}
-
 article {
     display: flex;
     margin-right: auto;
@@ -21,7 +17,6 @@ article {
 }
 .left {
     padding: 4em;
-    background: #414144;
     flex-grow: 1;
 
     header {
@@ -99,7 +94,7 @@ article {
 }
 .right {
     padding: 3vw;
-    background: #d4d4d4;
+    border: 8px solid var(--border-color);
     display: flex;
     flex-direction: column;
     justify-content: center;

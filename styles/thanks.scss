@@ -1,0 +1,24 @@
+@use 'base';
+
+body {
+    overflow: hidden;
+}
+main {
+    display: flex;
+    align-items: flex-end;
+}
+.logo {
+    font-size: 100vh;
+    // margin-top: -9vw;
+    // margin-left: 2vw;
+    position: absolute;
+    top: -20vh;
+}
+.thanks {
+    // margin-bottom: 25vh;
+    // margin-left: -18vw;
+    max-width: 60vh;
+    position: absolute;
+    top: 48.6vh;
+    left: 32vw;
+}

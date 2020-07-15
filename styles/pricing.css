@@ -11,6 +11,7 @@
 :root {
   --main-color: #6951f0;
   --lighter-color: #7661f1;
+  --border-color: #403777;
   --grey: #c4c4c4;
   --column-width: 40vw;
   --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
@@ -228,6 +229,7 @@ body {
   display: none;
   display: inline-block;
   z-index: 2;
+  color: var(--main-color);
 }
 
 .about-us article,
@@ -240,7 +242,6 @@ body {
 }
 
 .pricing {
-  background: #414144;
   overflow-x: hidden;
 }
 .pricing p {
@@ -259,7 +260,7 @@ body {
   margin-top: 8vh;
 }
 .pricing .cards .card {
-  border: 7px solid #5c5c61;
+  border: 7px solid var(--border-color);
   padding: 2em 2em 4em 2em;
   margin: 1em;
   max-width: 200px;
@@ -279,8 +280,8 @@ body {
 }
 .pricing .cards .card:hover {
   background-color: rgba(92, 92, 97, 0.5);
-  border-color: #68686e;
-  box-shadow: rgba(92, 92, 97, 0.9) 12px -12px;
+  border-color: var(--main-color);
+  box-shadow: var(--border-color) 12px -12px;
 }
 @media (max-width: 870px) {
   .pricing .cards {

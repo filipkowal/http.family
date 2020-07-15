@@ -11,6 +11,7 @@
 :root {
   --main-color: #6951f0;
   --lighter-color: #7661f1;
+  --border-color: #403777;
   --grey: #c4c4c4;
   --column-width: 40vw;
   --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
@@ -228,6 +229,7 @@ body {
   display: none;
   display: inline-block;
   z-index: 2;
+  color: var(--main-color);
 }
 
 .about-us article,
@@ -237,10 +239,6 @@ body {
 .about-us p,
 .pricing p {
   line-height: 1.5em;
-}
-
-body {
-  background: #bbbbbb;
 }
 
 article {
@@ -261,7 +259,6 @@ article {
 }
 .left {
   padding: 4em;
-  background: #414144;
   flex-grow: 1;
 }
 .left header {
@@ -335,7 +332,7 @@ article {
 }
 .right {
   padding: 3vw;
-  background: #d4d4d4;
+  border: 8px solid var(--border-color);
   display: flex;
   flex-direction: column;
   justify-content: center;

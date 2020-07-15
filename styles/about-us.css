@@ -11,6 +11,7 @@
 :root {
   --main-color: #6951f0;
   --lighter-color: #7661f1;
+  --border-color: #403777;
   --grey: #c4c4c4;
   --column-width: 40vw;
   --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
@@ -228,6 +229,7 @@ body {
   display: none;
   display: inline-block;
   z-index: 2;
+  color: var(--main-color);
 }
 
 .about-us article,
@@ -239,9 +241,6 @@ body {
   line-height: 1.5em;
 }
 
-.about-us {
-  background: #804436;
-}
 .about-us article {
   margin-top: 24vh;
   max-width: 38em;

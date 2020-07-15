@@ -16,7 +16,7 @@
                     class="logo-name no-decoration"></span></h1>
         </a>
 
-        <article class="side-padding">
+        <article>
 
             <form class="contact-form side-padding" action="./server/send-mail.php" method="POST">
 
@@ -28,18 +28,20 @@
                     Proszę o kontakt pod adres e-mail:
                     <span class="input-container email-container"><input type="email" name="email"></span>.
                 </h1>
-                <input type="submit" value="wyślij >" name="submit">
+                <div class="buttons">
+                    <a class="back" href="<?php echo $backHref; ?>">
+                        <h4>
+                            <span data-content="< powrót">
+                                &lt; powrót</span>
+                            </h4>
+                        </a>
+                    <input type="submit" value="Wyślij >" name="submit">
+                </div>
             </form>
 
         </article>
 
         <div class="side-padding">
-            <a class="back" href="<?php echo $backHref; ?>">
-                <h4>
-                    <span data-content="< powrót">
-                    &lt; powrót</span>
-                </h4>
-            </a>
         </div>
     </main>
 

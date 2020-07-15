@@ -1,7 +1,9 @@
 @use "service.scss";
 
 .contact-form {
-    margin-top: 22%;
+    margin-top: 5vw;
+    border: 8px solid var(--border-color);
+    padding: 8vw 6vw 4vw 6vw;
 
     .input-container {
         max-width: 10em;
@@ -20,6 +22,14 @@
         font-family: Brutman;
         font-size: 1em;
         font-weight: bold;
+    }
+    .buttons {
+        margin-top: 6vw;
+        display: flex;
+        flex-direction: row;
+        h4 {
+            margin-bottom: 0.2em;
+        }
     }
     [type="submit"] {
         display: block;
