@@ -28,9 +28,9 @@
 
         <div class="side-padding">
             <a class="back" href="single-page.php">
-                <h4><span data-content="< powrót">
+                <h5><span data-content="< powrót">
                         < powrót</span>
-                </h4>
+                </h5>
             </a>
         </div>
     </main>

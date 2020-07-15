@@ -17,7 +17,7 @@
             </a>
             <h3 class="nav start-hide hidden">
                 <!-- <a href="./portfolio.php">portfolio</a> -->
-                <br><a href="pricing.php"><span data-content="cennik">cennik</span></a>
+                <a href="pricing.php"><span data-content="cennik">cennik</span></a>
                 <br><a href="about-us.php"><span data-content="o nas">o nas</span></a>
             </h3>
         </header>

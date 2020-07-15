@@ -23,13 +23,12 @@
                     Zależy nam byś miał pozytywny wpływ na otoczenie dlatego m. in. korzystamy z serwerów zasilanych w
                     pełni
                     odnawialną energią.</p>
-                <h4>Przywitaj się:<br>
+                <h5>Przywitaj się:<br>
                     <a href="mailto:hello@http.family"><span
-                            data-content="czesc@http.family">hello@http.family</span></a></h4>
+                            data-content="hello@http.family">hello@http.family</span></a></h5>
                 <a class="back" href="index.php">
-                    <h4><span data-content="< powrót">
-                            < powrót</span>
-                    </h4>
+                    <h5><span data-content="< powrót">< powrót</span>
+                    </h5>
                 </a>
             </article>
         </div>

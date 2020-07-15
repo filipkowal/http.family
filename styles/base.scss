@@ -18,12 +18,12 @@
     --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
     --back-gradient: linear-gradient(rgba(105, 81, 240, 72), rgba(255, 255, 255, 58));
     --font-size: 19px;
-    --h1: 2.9em;
+    --h1: 2.9rem;
+    font-size: var(--font-size);
 }
 
 body {
     font-family: Brutman, Lato, sans-serif;
-    font-size: var(--font-size);
     background-color: black;
     color: white;
     font-weight: normal;
@@ -37,15 +37,19 @@ h1 {
     font-weight: bold;
 }
 h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 h3 {
-    font-size: 1.67em;
+    font-size: 1.67rem;
     font-weight: bold;
 }
 h4 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+h5 {
+    font-size: 1.15rem;
     font-weight: bold;
 }
 h1,
@@ -161,7 +165,7 @@ a {
     color: var(--main-color);
 }
 .logo {
-    font-size: 8em;
+    font-size: 2rem;
     margin: 0;
     display: flex;
     .logo-name {

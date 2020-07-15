@@ -18,18 +18,16 @@
         max-width: 1199px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 8vh;
 
         .card {
             border: 7px solid #5c5c61;
             padding: 2em 2em 4em 2em;
-            margin: 3em 0 0 0;
+            margin: 1em;
             max-width: 200px;
             position: relative;
             transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
 
-            &:not(:nth-of-type(0)) {
-                margin-left: 2em;
-            }
             h4 {
                 border-bottom: 3px solid var(--main-color);
                 display: inline-block;
