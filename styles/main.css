@@ -625,11 +625,18 @@ html {
 }
 @media (max-width: 870px) {
   .pricing main {
-    padding: 60px 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .pricing .side-padding {
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding-left: 16vw;
+    padding-right: 16vw;
+  }
+}
+@media (max-width: 689px) {
+  .pricing .side-padding {
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 }
 .pricing .price {
