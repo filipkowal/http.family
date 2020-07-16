@@ -308,10 +308,12 @@
             <section class="environment">
                 <div class="text">
                     <h2>Troska<br> o środowisko</h2>
-                    <p class="description">Internet wytwarza tyle samo CO2 co transport lotniczy.*
+                    <p class="description">Internet wytwarza tyle samo CO2 co transport lotniczy.
+                        <a href="https://www.webneutralproject.com/the-problem" class="no-decoration logo-sign" target="_blank">*</a>
                         Twoja strona przyczyni się do odwrócenia tego efektu dzięki hostingowi na serwerach zasilanych
                         energią
-                        odnawialną.*
+                        odnawialną.
+                        <a href="https://ecohosting.co.uk/" class="no-decoration logo-sign" target="_blank">*</a>
                     </p>
                 </div>
                 <svg width="781" height="922" viewBox="0 0 781 922" fill="none" xmlns="http://www.w3.org/2000/svg">

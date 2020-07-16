@@ -1,8 +1,15 @@
 @use 'base';
 @use 'subpage';
 
-.pricing {
+html {
+    // height: 100%;
+    position: relative;
     overflow-x: hidden;
+}
+.pricing {
+    // height: 100%;
+    // position: relative;
+
     p {
         line-height: 1.3em;
     }
@@ -46,9 +53,12 @@
         }
     }
     @media (max-width: 870px) {
-        .cards {
-            margin-left: -6vw;
-            margin-right: -6vw;
+        main {
+            padding: 60px 0 0 0;
+        }
+        .side-padding {
+            padding-left: 12vw;
+            padding-right: 12vw;
         }
     }
     .price {
@@ -59,10 +69,21 @@
         display: block;
         right: 2em;
     }
+    .blobs {
+        position: absolute;
+        overflow: hidden;
+        // overflow-y: visible;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        // width: 100%;
+        // height: 100%;
+        z-index: -1;
+    }
     .blob {
         display: block;
         position: absolute;
-        z-index: -1;
         transform: scale(0.7);
 
         &.one {

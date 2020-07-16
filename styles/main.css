@@ -541,9 +541,11 @@ body {
   max-width: 38em;
 }
 
-.pricing {
+html {
+  position: relative;
   overflow-x: hidden;
 }
+
 .pricing p {
   line-height: 1.3em;
 }
@@ -584,9 +586,12 @@ body {
   box-shadow: var(--border-color) 12px -12px;
 }
 @media (max-width: 870px) {
-  .pricing .cards {
-    margin-left: -6vw;
-    margin-right: -6vw;
+  .pricing main {
+    padding: 60px 0 0 0;
+  }
+  .pricing .side-padding {
+    padding-left: 12vw;
+    padding-right: 12vw;
   }
 }
 .pricing .price {
@@ -597,10 +602,18 @@ body {
   display: block;
   right: 2em;
 }
+.pricing .blobs {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
 .pricing .blob {
   display: block;
   position: absolute;
-  z-index: -1;
   transform: scale(0.7);
 }
 .pricing .blob.one {
