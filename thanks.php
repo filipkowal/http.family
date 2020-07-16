@@ -27,6 +27,7 @@
 
     </main>
 
+    <script src="./js/thanks.js"></script>
 </body>
 
 </html>
