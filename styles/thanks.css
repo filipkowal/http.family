@@ -239,12 +239,31 @@ main {
   position: absolute;
   top: -20vh;
 }
+@media (max-width: 450px) {
+  .logo {
+    font-size: 80vh;
+    top: 39vh;
+    top: -4vh;
+    left: 9vw;
+    bottom: 0;
+  }
+}
+@media (max-width: 380px) {
+  .logo {
+    font-size: 70vh;
+  }
+}
 
 .thanks {
   max-width: 60vh;
   position: absolute;
   top: 48.6vh;
   left: 32vw;
+}
+@media (max-width: 1100px) {
+  .thanks {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=thanks.css.map */
