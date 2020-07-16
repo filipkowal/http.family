@@ -310,7 +310,7 @@
                     <h2>Troska<br> o środowisko</h2>
                     <p class="description">Internet wytwarza tyle samo CO2 co transport lotniczy.
                         <a href="https://www.webneutralproject.com/the-problem" class="no-decoration logo-sign" target="_blank">*</a>
-                        Twoja strona przyczyni się do odwrócenia tego efektu dzięki hostingowi na serwerach zasilanych
+                        <br>Twoja strona przyczyni się do odwrócenia tego efektu dzięki hostingowi na serwerach zasilanych
                         energią
                         odnawialną.
                         <a href="https://ecohosting.co.uk/" class="no-decoration logo-sign" target="_blank">*</a>

@@ -217,7 +217,7 @@ a span::before {
 }
 @media (max-width: 500px) {
   body {
-    padding: 0;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 370px) {
@@ -225,6 +225,44 @@ a span::before {
     font-size: 2.2em;
   }
 }
+.blobs {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.blob {
+  display: block;
+  position: absolute;
+  transform: scale(0.7);
+}
+.blob.one {
+  top: -12%;
+  left: 62%;
+}
+.blob.two {
+  top: 30%;
+  left: -300px;
+}
+@media (max-width: 1600px) {
+  .blob.two {
+    left: -531px;
+  }
+}
+@media (max-width: 700px) {
+  .blob.two {
+    left: -610px;
+  }
+}
+.blob.three {
+  left: 60vw;
+  bottom: -27vh;
+}
+
 body {
   font-size: 16px;
 }
@@ -305,40 +343,6 @@ html {
   bottom: 2em;
   display: block;
   right: 2em;
-}
-.pricing .blobs {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-}
-.pricing .blob {
-  display: block;
-  position: absolute;
-  transform: scale(0.7);
-}
-.pricing .blob.one {
-  top: -12%;
-  left: 62%;
-}
-.pricing .blob.two {
-  top: 30%;
-  left: -13%;
-}
-.pricing .blob.three {
-  left: 60vw;
-  bottom: -27vh;
-}
-@media (max-width: 580px) {
-  .pricing .blob.two {
-    top: 85%;
-  }
-  .pricing .blob.three {
-    top: 225vh;
-  }
 }
 
 /*# sourceMappingURL=pricing.css.map */

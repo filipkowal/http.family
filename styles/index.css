@@ -218,7 +218,7 @@ a span::before {
 }
 @media (max-width: 500px) {
   body {
-    padding: 0;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 370px) {

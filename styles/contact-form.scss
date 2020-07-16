@@ -1,9 +1,19 @@
 @use "service.scss";
+@use "blobs";
+
+html {
+    position: relative;
+    overflow-x: hidden;
+}
+body {
+    min-height: 98vh;
+}
 
 .contact-form {
-    margin-top: 5vw;
+    margin-top: 8vh;
     border: 8px solid var(--border-color);
     padding: 8vw 6vw 4vw 6vw;
+    max-width: 1334px;
 
     .input-container {
         max-width: 10em;
@@ -47,15 +57,15 @@
         --h1: 2em;
     }
 }
-.blobs {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-.blob {
-    z-index: -1;
-}
+// .blobs {
+//     height: 100vh;
+//     width: 100vw;
+//     overflow: hidden;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -1;
+// }
+// .blob {
+//     z-index: -1;
+// }

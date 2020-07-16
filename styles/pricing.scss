@@ -1,15 +1,12 @@
 @use 'base';
+@use 'blobs';
 @use 'subpage';
 
 html {
-    // height: 100%;
     position: relative;
     overflow-x: hidden;
 }
 .pricing {
-    // height: 100%;
-    // position: relative;
-
     p {
         line-height: 1.3em;
     }
@@ -68,44 +65,5 @@ html {
         bottom: 2em;
         display: block;
         right: 2em;
-    }
-    .blobs {
-        position: absolute;
-        overflow: hidden;
-        // overflow-y: visible;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        // width: 100%;
-        // height: 100%;
-        z-index: -1;
-    }
-    .blob {
-        display: block;
-        position: absolute;
-        transform: scale(0.7);
-
-        &.one {
-            top: -12%;
-            left: 62%;
-        }
-        &.two {
-            top: 30%;
-            left: -13%;
-        }
-
-        &.three {
-            left: 60vw;
-            bottom: -27vh;
-        }
-        @media (max-width: 580px) {
-            &.two {
-                top: 85%;
-            }
-            &.three {
-                top: 225vh;
-            }
-        }
     }
 }

@@ -1,0 +1,57 @@
+.blobs {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.blob {
+    display: block;
+    position: absolute;
+    transform: scale(0.7);
+
+    &.one {
+        top: -12%;
+        left: 62%;
+    }
+    &.two {
+        top: 30%;
+        left: -300px;
+
+        @media (max-width: 1600px) {
+            & {
+                left: -531px;
+            }
+        }
+        @media (max-width: 700px) {
+            & {
+                left: -610px;
+            }
+        }
+        // @media (max-width: 1050px) {
+        //     & {
+        //         left: -53%;
+        //     }
+        // }
+        // @media (max-width: 900px) {
+        //     & {
+        //         left: -63%;
+        //     }
+        // }
+    }
+
+    &.three {
+        left: 60vw;
+        bottom: -27vh;
+    }
+    // @media (max-width: 580px) {
+    //     &.two {
+    //         top: 85%;
+    //     }
+    //     &.three {
+    //         top: 225vh;
+    //     }
+    // }
+}

@@ -217,7 +217,7 @@ a span::before {
 }
 @media (max-width: 500px) {
   body {
-    padding: 0;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 370px) {
@@ -243,6 +243,48 @@ body {
 .about-us p,
 .pricing p {
   line-height: 1.5em;
+}
+
+.blobs {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.blob {
+  display: block;
+  position: absolute;
+  transform: scale(0.7);
+}
+.blob.one {
+  top: -12%;
+  left: 62%;
+}
+.blob.two {
+  top: 30%;
+  left: -300px;
+}
+@media (max-width: 1600px) {
+  .blob.two {
+    left: -531px;
+  }
+}
+@media (max-width: 700px) {
+  .blob.two {
+    left: -610px;
+  }
+}
+.blob.three {
+  left: 60vw;
+  bottom: -27vh;
+}
+
+html {
+  position: relative;
 }
 
 article {
@@ -360,28 +402,20 @@ article {
   right: 999vw;
 }
 
-.blob {
-  display: block;
-  position: absolute;
-  transform: scale(0.7);
+html {
+  position: relative;
+  overflow-x: hidden;
 }
-.blob.one {
-  top: -12%;
-  left: 62%;
-}
-.blob.two {
-  top: 30%;
-  right: 70vw;
-}
-.blob.three {
-  left: 60vw;
-  bottom: -6vh;
+
+body {
+  min-height: 98vh;
 }
 
 .contact-form {
-  margin-top: 5vw;
+  margin-top: 8vh;
   border: 8px solid var(--border-color);
   padding: 8vw 6vw 4vw 6vw;
+  max-width: 1334px;
 }
 .contact-form .input-container {
   max-width: 10em;
@@ -425,20 +459,6 @@ article {
   .contact-form {
     --h1: 2em;
   }
-}
-
-.blobs {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.blob {
-  z-index: -1;
 }
 
 /*# sourceMappingURL=contact-form.css.map */
