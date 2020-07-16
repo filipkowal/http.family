@@ -1,0 +1,256 @@
+@font-face {
+  font-family: Brutman;
+  src: url("../resources/Brutman-100.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Brutman;
+  src: url("../resources/Brutman-70.otf") format("opentype");
+  font-weight: normal;
+}
+:root {
+  --main-color: #6951f0;
+  --lighter-color: #7661f1;
+  --border-color: #403777;
+  --grey: #c4c4c4;
+  --column-width: 40vw;
+  --front-gradient: linear-gradient(var(--main-color), rgba(100, 83, 195, 72), rgba(98, 84, 173, 58));
+  --back-gradient: linear-gradient(rgba(105, 81, 240, 72), rgba(255, 255, 255, 58));
+  --font-size: 19px;
+  --h1: 2.9rem;
+  --h2: 2.5rem;
+  --h3: 1.67rem;
+  --h4: 1.3rem;
+  --h5: 1.15rem;
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: Brutman, Lato, sans-serif;
+  background-color: black;
+  color: white;
+  font-weight: normal;
+}
+
+main {
+  padding: 60px 12vw 0 12vw;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: bold;
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: bold;
+}
+
+h5 {
+  font-size: var(--h5);
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+
+[type=checkbox] {
+  position: absolute;
+  left: -1000vw;
+  opacity: 0;
+}
+
+[type=checkbox] + label {
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+}
+
+[type=checkbox] + label::before {
+  content: "";
+  border: 0.3em solid var(--main-color);
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.5em;
+  position: absolute;
+  left: 0;
+  top: -0.15em;
+}
+
+[type=checkbox]:checked + label::before {
+  background-color: var(--main-color);
+  animation: stretch 100ms ease-in-out;
+}
+@keyframes stretch {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+[type=number] {
+  border: none;
+  border-bottom: 0.3em solid var(--main-color);
+  background: none;
+  width: 1.15em;
+  color: white;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  font-family: Brutman;
+  font-size: 1em;
+  margin-top: -0.37em;
+  margin-right: 0.5em;
+}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  background-color: var(--main-color);
+  color: white;
+  font-family: Brutman;
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+button:hover {
+  background-color: #6130ed;
+}
+
+.side-padding {
+  padding: 0 4vw;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: line-through;
+  color: white;
+  position: relative;
+  transition: clip-path 275ms ease;
+}
+a:hover span::before, a:focus span::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+a span {
+  position: relative;
+  display: inline;
+  text-decoration: line-through;
+}
+a span::before {
+  position: absolute;
+  content: attr(data-content);
+  text-decoration: line-through;
+  text-decoration-color: var(--main-color);
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  transition: clip-path 275ms ease;
+}
+
+.logo-sign {
+  color: var(--main-color);
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+}
+.logo .logo-name {
+  word-wrap: break-word;
+  display: inline-block;
+  max-width: 60vw;
+}
+.logo .caret {
+  border-right: 5px solid white;
+  animation: pulse 900ms steps(1) 4;
+}
+@keyframes pulse {
+  0% {
+    border-right: 5px solid white;
+  }
+  50% {
+    border-right: none;
+  }
+  100% {
+    border-right: 5px solid white;
+  }
+}
+
+@media (max-width: 1150px) {
+  :root {
+    --font-size: calc(12px + 0.6vw);
+  }
+}
+@media (max-width: 689px) {
+  body {
+    padding: 4vw;
+  }
+
+  main {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 370px) {
+  h2 {
+    font-size: 2.2em;
+  }
+}
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.logo-sign {
+  font-size: 12rem;
+  font-weight: bold;
+  position: absolute;
+  top: 36vh;
+  left: 40vw;
+  margin: auto;
+  text-align: center;
+}
+
+a:hover .logo-sign {
+  color: white;
+}
+
+.noise {
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*# sourceMappingURL=404.css.map */
