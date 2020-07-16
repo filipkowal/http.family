@@ -1,37 +1,42 @@
 function typeWriter() {
     const text = 'http.family';
     const caret = '<span class="caret"></span>';
-    let logo = document.querySelector('.logo-name');
+    let logoName = document.querySelector('.logo-name');
+    let logo = document.querySelector('.logo');
     let i = 0;
 
-    writeAndRemove();
-
-    function writeAndRemove() {
+    function write(afterWrite, time) {
         let interval = setInterval(() => {
-            logo.innerHTML = text.substring(0, i) + caret;
+            logoName.innerHTML = text.substring(0, i) + caret;
             i = i + 1;
 
             if (i > 12) {
                 clearInterval(interval);
 
-                setTimeout(remove, 150);
+                afterWrite ? afterWrite() : null;
             }
-        }, 60);
+        }, time);
     }
 
-    function remove() {
+    function remove(time) {
         let interval1 = setInterval(() => {
             i = i - 1;
-            logo.innerHTML = text.substring(0, i) + caret;
+            logoName.innerHTML = text.substring(0, i) + caret;
 
             if (i <= 0) {
-                logo.innerHTML = '';
+                logoName.innerHTML = '';
                 clearInterval(interval1);
 
-                setTimeout(show, 50);
+                setTimeout(show, time);
             }
         }, 30)
     }
+
+    write(() => setTimeout(remove, 150), 60);
+
+    logo.addEventListener('mouseover', () => write(null, 30));
+    logo.addEventListener('mouseout', () => remove(0));
+
 }
 
 function show() {
@@ -45,3 +50,4 @@ function typeOrShow() {
 }
 
 typeOrShow();
+
