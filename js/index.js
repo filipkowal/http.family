@@ -5,8 +5,9 @@ function typeWriter() {
     let logo = document.querySelector('.logo');
     let i = 0;
 
+    let interval = null;
     function write(afterWrite, time) {
-        let interval = setInterval(() => {
+        interval = setInterval(() => {
             logoName.innerHTML = text.substring(0, i) + caret;
             i = i + 1;
 
@@ -19,6 +20,7 @@ function typeWriter() {
     }
 
     function remove(time) {
+        clearInterval(interval);
         let interval1 = setInterval(() => {
             i = i - 1;
             logoName.innerHTML = text.substring(0, i) + caret;
