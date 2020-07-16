@@ -34,7 +34,11 @@ function typeWriter() {
         }, 30)
     }
 
-    write(() => setTimeout(remove, 150), 60);
+    if (sessionStorage.getItem('coming_from_subpage') === 'true') {
+        show()
+    } else {
+        write(() => setTimeout(remove, 150), 60);
+    }
 
     logo.addEventListener('mouseover', () => write(null, 30));
     logo.addEventListener('mouseout', () => remove(0));
@@ -47,9 +51,5 @@ function show() {
     sessionStorage.setItem('coming_from_subpage', false);
 }
 
-function typeOrShow() {
-    sessionStorage.getItem('coming_from_subpage') === 'true' ? show() : typeWriter();
-}
-
-typeOrShow();
+typeWriter();
 
